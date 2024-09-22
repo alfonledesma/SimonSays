@@ -1,0 +1,320 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  box-sizing: border-box;
+  background: radial-gradient(#1e82c6, #465a67); 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: rgba(100, 101, 104, 0.8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 590px;
+  border-radius: 20px; 
+  background: linear-gradient(#282c34, #393d42, #282c34);
+  padding: 20px;
+  border: 10px solid #241f21;
+  box-shadow: 5px 15px 10px 1px black;
+}
+
+.colorCard {
+  height: 275px;
+  width: 275px;
+  margin: 8px;
+  box-shadow: 2px 8px 10px 1px black;
+  flex-shrink: 0;
+  border-radius: 20%; 
+}
+
+.startButton {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 20%;
+  font-size: 21px;
+  color: white;
+  background: radial-gradient(#282c34, black);
+  box-shadow: 2px 8px 10px 1px black;
+  cursor: pointer;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+}
+
+.startButton:hover {
+  width: 177px;
+  height: 177px;
+}
+
+.score {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background: radial-gradient(#282c34, black);
+  font-size: 100px;
+  color: white;
+  box-shadow: 2px 8px 10px 1px black;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px 0;
+}
+
+.lost {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(80, 0, 0, 0.8);
+  border-radius: 20px;
+  position: absolute;
+  padding: 20px;
+}
+
+.flash.flash {
+  box-sizing: border-box;
+  border: 3px solid white;
+}
+
+.red {
+  background-color: rgb(255, 100, 100); 
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.red.flash {
+  background-color: rgb(255, 132, 132);
+}
+
+.blue {
+  background-color: rgb(100, 100, 255); 
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.blue.flash {
+  background-color: rgb(123, 125, 255);
+}
+
+.green {
+  background-color: rgb(100, 255, 100); 
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.green.flash {
+  background-color: rgb(143, 252, 134);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 100); 
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.yellow.flash {
+  background-color: rgb(224, 229, 126);
+}
+
+.menuButton {
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  background: radial-gradient(#282c34, black);
+  color: white;
+  border: 2px solid #241f21;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  width: 301px;
+  height: 101px;
+}
+
+.finalScore {
+  font-size: 50px;
+  color: #0f2743;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .cardWrapper {
+    max-width: 100%;
+  }
+
+  .colorCard {
+    height: 200px;
+    width: 200px;
+  }
+
+  .startButton {
+    width: 150px;
+    height: 150px;
+    font-size: 18px;
+  }
+
+  .score {
+    width: 120px;
+    height: 120px;
+    font-size: 80px;
+  }
+
+  .lost {
+    width: 350px;
+    height: 350px;
+  }
+
+  .menuButton.button {
+    width: 250px;
+    height: 80px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .colorCard {
+    height: 150px;
+    width: 150px;
+  }
+
+  .startButton {
+    width: 125px;
+    height: 125px;
+    font-size: 16px;
+  }
+
+  .score {
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+  }
+
+  .lost {
+    width: 300px;
+    height: 300px;
+  }
+
+  .menuButton.button {
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .colorCard {
+    height: 120px;
+    width: 120px;
+  }
+
+  .startButton {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .score {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+  }
+
+  .lost {
+    width: 250px;
+    height: 250px;
+  }
+
+  .menuButton, .button {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .colorCard {
+    height: 100px;
+    width: 100px;
+  }
+
+  .startButton {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+
+  .score {
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+  }
+
+  .lost {
+    width: 200px;
+    height: 200px;
+  }
+
+  .menuButton, .button {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 280px) {
+  .colorCard {
+    height: 80px;
+    width: 80px;
+  }
+
+  .startButton {
+    width: 75px;
+    height: 75px;
+    font-size: 10px;
+  }
+
+  .score {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .lost {
+    width: 150px;
+    height: 150px;
+  }
+
+  .menuButton, .button {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
